@@ -1,0 +1,23 @@
+.card {
+  display: flex;
+  width: 590px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 16px;
+  @media (max-width: 1190px) {
+    width: 100%;
+  }
+  &-left {
+    display: flex;
+    margin-right: 15px;
+    img {
+      width: 185px;
+      height: 278px;
+    }
+  }
+  &-right {
+    display: flex;
+    .card-text {
+      font-size: 18px;
+    }
+  }
+}
