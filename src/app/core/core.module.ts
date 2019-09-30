@@ -7,6 +7,7 @@ import { HomeComponent } from '../pages/home/home.component';
 import { CardComponent } from '../shared/components/card/card.component';
 import { MoviesComponent } from '../pages/movies/movies.component';
 import { GenreComponent } from '../pages/genre/genre.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { GenreComponent } from '../pages/genre/genre.component';
   ],
   imports: [
     CommonModule,
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   exports: [
     BrowserModule,
@@ -26,7 +28,8 @@ import { GenreComponent } from '../pages/genre/genre.component';
     HomeComponent,
     CardComponent,
     MoviesComponent,
-    GenreComponent
+    GenreComponent,
+    HttpClientModule
   ]
 })
 export class CoreModule { }
