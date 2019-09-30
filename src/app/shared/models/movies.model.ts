@@ -1,4 +1,4 @@
-export class Movies {
+export abstract class Movies {
     public vote_count: number;
     public id: number;
     public video: boolean;
