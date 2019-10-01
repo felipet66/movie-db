@@ -26,11 +26,10 @@ export abstract class BaseResourceService<T extends BaseResourceModel> {
     );
   }
 
-  getById(id: number): Observable<T> {
-    const url = `${this.apiPath}/${id}`;
-
+  filterBy(data: string): any {
+    const url = this.apiPath + data;
     return this.http.get(url).pipe(
-      map(x => console.log(x)),
+      map(resource => this.resources = resource),
       catchError(this.handleError)
     );
   }

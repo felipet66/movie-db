@@ -11,6 +11,7 @@
       flex-direction: column;
       justify-content: center;
       align-content: space-around;
+      align-items: center;
     }
   }
   .filters{
@@ -23,6 +24,9 @@
     cursor: pointer;
     &:hover{
       background-color: lightcyan;
+    }
+    @media (max-width: 990px) {
+      margin-left: 20px;
     }
   }
 }

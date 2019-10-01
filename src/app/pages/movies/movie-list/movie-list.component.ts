@@ -11,12 +11,22 @@ import { MovieService } from '../shared/movies.service';
 })
 export class MovieListComponent extends BaseResourceListComponent<Movie> implements OnInit {
   constructor(private movieService: MovieService) {
-    super(movieService)
-    console.log(this.movieService)
+    super(movieService);
   }
 
   getUrlImg(data: any): string {
     return 'https://image.tmdb.org/t/p/w370_and_h556_bestv2/' + data;
+  }
+
+  limitCaracteres(title: string) {
+    if (title.length > 305) {
+      title = title.substring(0, 300);
+    }
+    return title + '...';
+  }
+
+  filterBy(filter: string) {
+    this.movieService.filterBy(filter);
   }
 }
 

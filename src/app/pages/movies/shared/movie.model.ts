@@ -15,12 +15,9 @@ export class Movie extends BaseResourceModel {
     public backdrop_path?: string,
     public adult?: boolean,
     public overview?: string,
-    public realease_date?: string
+    public realease_date?: string,
+    public results?: []
   ) {
     super();
-  }
-
-  static fromJson(jsonData: any): Movie {
-    return Object.assign(new Movie(), jsonData);
   }
 }
