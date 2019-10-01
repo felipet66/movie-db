@@ -1,9 +1,16 @@
 <div class="container">
-  <div class="wrapper-content">
-	  <app-card
-	  *ngFor="let movie of resources.results"
-	  imgBackground="https://image.tmdb.org/t/p/w370_and_h556_bestv2/spYx9XQFODuqEVoPpvaJI1ksAVt.jpg" 
-	  text="oi"
-	  ></app-card>
-  </div>
+	<div class="row">
+		<div class="col-md-2 filters">Id</div>
+		<div class="col-md-2 filters">Popularidade</div>
+		<div class="col-md-2 filters">Media Votos</div>
+		<div class="col-md-2 filters">Total Votos</div>
+		<div class="col-md-6" *ngFor="let movie of resources.results">
+			<app-card
+				[imgBackground]="getUrlImg(movie.backdrop_path)" 
+				[title]="movie.original_title"
+				[subtitle]="movie.release_date | date"
+				[description]="movie.overview"
+			></app-card>
+		</div>
+	</div>
 </div>

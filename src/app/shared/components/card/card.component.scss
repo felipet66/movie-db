@@ -1,11 +1,8 @@
 .card {
   display: flex;
-  width: 590px;
+  flex-direction: row;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   margin-top: 16px;
-  @media (max-width: 1190px) {
-    width: 100%;
-  }
   &-left {
     display: flex;
     margin-right: 15px;
@@ -16,8 +13,13 @@
   }
   &-right {
     display: flex;
-    .card-text {
-      font-size: 18px;
-    }
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &-description{
+    font-size: 12px;
+    text-align: justify;
+    padding-right: 10px;
   }
 }

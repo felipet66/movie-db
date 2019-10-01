@@ -13,4 +13,16 @@
       align-content: space-around;
     }
   }
+  .filters{
+    padding: 10px 20px;
+    border: 1px solid darkcyan;
+    margin-left: 75px;
+    border-radius: 20px;
+    margin-top: 16px;
+    text-align: center;
+    cursor: pointer;
+    &:hover{
+      background-color: lightcyan;
+    }
+  }
 }

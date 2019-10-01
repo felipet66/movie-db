@@ -10,9 +10,13 @@ import { MovieService } from '../shared/movies.service';
   styleUrls: ['./movie-list.component.scss']
 })
 export class MovieListComponent extends BaseResourceListComponent<Movie> implements OnInit {
-  private dataMovies = this.resources;
   constructor(private movieService: MovieService) {
     super(movieService)
+    console.log(this.movieService)
+  }
+
+  getUrlImg(data: any): string {
+    return 'https://image.tmdb.org/t/p/w370_and_h556_bestv2/' + data;
   }
 }
 
