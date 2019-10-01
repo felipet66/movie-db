@@ -1,0 +1,16 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  .wrapper-content {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 1190px) {
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-content: space-around;
+    }
+  }
+}
