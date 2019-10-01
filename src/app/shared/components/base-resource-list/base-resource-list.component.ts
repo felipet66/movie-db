@@ -4,13 +4,19 @@ import { BaseResourceService } from '../../services/base-resource.service';
 
 export abstract class BaseResourceListComponent<T extends BaseResourceModel> implements OnInit {
   public resources: T[] = [];
+  public loader = true;
 
   constructor(private resourceService: BaseResourceService<T>) { }
 
   ngOnInit() {
     this.resourceService.getAll().subscribe(
-      resources => this.resources = resources,
+      resources => {
+        setTimeout(() => {
+          this.loader = false;
+        }, 1500);
+        this.resources = resources;
+      },
       error => alert('Erro ao carregar a lista')
-    )
+    );
   }
 }

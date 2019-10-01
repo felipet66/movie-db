@@ -1,5 +1,10 @@
 <div class="container">
-	<div class="row">
+	<div class="row" *ngIf="loader">
+		<div class="col-md-12 flex justify-center mt-5">
+			<app-loader></app-loader>
+		</div>
+	</div>
+	<div class="row" *ngIf="!loader">
 		<div class="col-md-2 filters" (click)="filterBy('&sort_by=id.desc')">Id</div>
 		<div class="col-md-2 filters" (click)="filterBy('&sort_by=id.popularity')">Popularidade</div>
 		<div class="col-md-2 filters" (click)="filterBy('&sort_by=id.vote_average')">Media Votos</div>
